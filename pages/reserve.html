@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title> Bon Apétit</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/49dfbda992.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reserve.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="mid-section">
+      <section class="header">
+        <header>
+          <div class="logo-area">
+              <a href="index.html">
+              <i class="fas fa-utensils"></i>Bon Apétit
+              </a>
+              </div>
+              <div class="menu">
+                  <ul>
+                      <li>
+                          <a href="../index.html">
+                              Home
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="menu.html">
+                              Menu
+                          </a>
+                      </li>
+                      <li>
+                          <a href="reserve.html">
+                            Make Reservation <i class="fas fa-chevron-right"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              </header>
+              <div class="hamburger-menu">
+    <div class="menu-btn">
+      <div class="menu-btn-bgr">
+
+      </div>
+    </div>
+
+  </div>
+  <div class="nav-links">
+    <ul>
+      <li> <a href="../index.html">Home</a> </li>
+                  <li> <a href="menu.html">Menu</a> </li>
+                          <li> <a href="reserve.html">Make Reservation</a>  </li>
+    </ul>
+  </div>
+      </section>
+
+
+    </div>
+
+    <section class="content2-page">
+      <div class="content2">
+        <div class="content2-text">
+  <h1 id="content2-line1">Bon Apétit</h1>
+  <h1 id="content2-line2"> Make Reservation<br>With Us</h1>
+
+  <div class="container">
+  <div class="row">
+    <div class='col-sm-6'>
+      <form>
+          <div class="form-group-date">
+              <div class='input-group date' id='datepicker'>
+                  <input type='text' placeholder="Date" class="form-control" id="date" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+          <div class="form-group-ppl">
+              <div class='input-group date' id="numppl">
+                  <input type='text' placeholder="Number of people" class="form-control" id="ppl" />
+              </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="btncontain">
+    <a class="more" >Find A Table</a>
+</div>
+        </div>
+        <div class="content2-img">
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="footer">
+  <div class="email-section">
+    <a href="index.html" class="logo"> <i class="fas fa-utensils"></i>Bon Apétit</a>
+    <div class="footer-icons">
+      <ul>
+          <li>
+              <a href="index.html">
+                <i class="fab fa-twitter"></i>
+              </a>
+          </li>
+          <li>
+              <a href="index.html">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+          </li>
+          <li>
+              <a href="index.html">
+                <i class="fab fa-google-plus-g"></i>
+
+              </a>
+          </li>
+          <li>
+              <a href="pages/contact.html">
+                <i class="fab fa-instagram"></i>
+              </a>
+          </li>
+      </ul>
+<div class="footer-copyright">
+<h1>@Bon Apétit</h1>
+<h1>Design By Joseph Tejeda. All Rights Reserved</h1>
+</div>
+    </div>
+  </div>
+
+    </div>
+    <script>
+    //////////////////////////////////hamburger-menu////////////////////////////
+    const menuBtn=document.querySelector('.menu-btn');
+    const navmenu=document.querySelector('.nav-links');
+
+    let menuOpen=false;
+    menuBtn.addEventListener('click',function(){
+      if(!menuOpen){
+    menuBtn.classList.add('open');
+    navmenu.classList.add('clicked');
+        menuOpen=true;
+         }
+      else
+      {
+      menuBtn.classList.remove('open');
+      navmenu.classList.remove('clicked');
+        menuOpen=false;
+              }
+
+    }
+    )
+///////////////////////////////////Date Picker//////////////////////////
+    $(function () {
+        $('#datepicker').datepicker({
+            format: "dd/mm/yyyy",
+            autoclose: true,
+            todayHighlight: true,
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          autoclose: true,
+          changeMonth: true,
+          changeYear: true,
+          orientation: "button"
+        });
+    });
+    ///////////////////////////////////////////////////////////////////////
+    var reserve=document.querySelector(".more");
+      var date=document.querySelector("#date");
+        var ppl=document.querySelector("#ppl");
+    reserve.addEventListener("click", function(){
+      alert("Reservation Succesful")
+    })
+    </script>
+  </body>
+  </html>

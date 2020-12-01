@@ -1,0 +1,435 @@
+html{
+  overflow-x: hidden;
+}
+body{
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
+}
+/*Header Area*/
+.header{
+  width:100%;
+  height: 70px;
+  display:inline-block;
+  margin-bottom: 30px;
+  background: #131A22;
+}
+header a{
+  margin-top: 10px;
+text-decoration: none;
+color:white;
+  line-height: 40px;
+}
+.logo-area{
+  width:15%;
+  display: inline-block;
+}
+.logo-area a{
+  float:left;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.logo-area a i{
+  margin-right: 5px;
+}
+header .menu{
+  display: inline-block;
+  width:80%;
+}
+.menu ul{
+  display: inline-block;
+  float: right;
+}
+.menu ul li{
+  display:inline-block;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.menu ul li a:hover{
+  border-bottom: 2px dotted grey;
+}
+.nav-links ul{
+opacity: 0;
+}
+/*Content Area*/
+main{
+  margin-top:20px;
+  position: relative;
+  width:100%;
+height: 650px;
+
+
+}
+.accordion h1{
+  margin: 20px 0px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+}
+.img-container{
+  margin: auto;
+  position:relative;
+height:90%;
+width:90%;
+}
+
+.crossfade{
+  opacity:0;
+}
+.img-container img {
+  width:100%;
+  height:100%;
+    object-fit: cover;
+      object-position: center;
+  position:absolute;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+}
+
+
+
+/*//////////////////accordion//////////////*/
+
+.accordion {
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion h1{
+font-size: 40px;
+}
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 4.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+h2{
+  font-size: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+.accordion-item-body-content ul li{
+  margin-bottom:5px;
+}
+.content2-text{
+text-align: center;
+border: 2px solid rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+}
+
+.footer{
+  background:#131A22;
+  width:100%;
+  height:200px;
+  position:relative;
+}
+.email-section {
+  width:100%;
+  height:150px;
+  text-align: center;
+  padding-top: 1%;
+  display:block;
+}
+.email-section .logo{
+  display: block;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color:white;
+}
+.email-section ul{
+  margin:20px 0px;
+  display: inline-block;
+}
+.email-section li{
+  display: inline-block;
+}
+
+.footer-menu li #line{
+border-right: 1px solid white;
+}
+.email-section ul li a{
+  padding:0px 30px;
+  font-weight: 600;
+  color:white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.email-section .footer-icons{
+  margin-top: 20px;
+}
+.email-section .footer-icons ul li a{
+  padding: 0px;
+  margin:10px;
+}
+.footer-copyright{
+  color:white;
+  margin-top: 7px;
+}
+/* RESPONSIVE HAMBURGER MENU*/
+@media screen and (max-width:768px){
+
+  .menu-btn{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    transition: all .5s ease-in-out;
+
+    top:5px;
+    right:10px;
+      z-index: 2;
+  }
+  .menu-btn-bgr{
+    width:40px;
+    height:5px;
+    background: white;
+    border-radius:5px;
+    box-shadow:0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-bgr::before,
+  .menu-btn-bgr::after{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:5px;
+  background: white;
+  border-radius:5px;
+  box-shadow:0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  }
+  .menu-btn-bgr::before{
+    transform:translateY(-16px);
+  }
+  .menu-btn-bgr::after{
+    transform:translateY(16px);
+  }
+
+
+  .menu-btn.open .menu-btn-bgr{
+    transform:translateX(-50px);
+    background:transparent;
+    box-shadow:none;
+  }
+  .menu-btn.open .menu-btn-bgr::before{
+    transform:rotate(45deg) translate(35px,-35px);
+  }
+  .menu-btn.open .menu-btn-bgr::after{
+    transform:rotate(-45deg) translate(35px,35px) ;
+  }
+.nav-links{
+  width: 100%;
+background-color:#131A22;
+  position:fixed;
+transform: translateX(-100%);
+  height:100vh;
+  z-index: 1;
+  transition:.3s ease-in-out;
+}
+.nav-links ul{
+opacity: 1;
+  margin-top: 100px;
+  display:block;
+  z-index:1;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align:center;
+  font-weight: 600;
+    transition:.3s ease-in-out;
+}
+.nav-links li{
+  width:100%;
+  height:50px;
+  padding:40px 0px;
+  display:block;
+  z-index:1;
+    transition:.3s ease-in-out;
+    border-bottom: 1px solid white;
+}
+.nav-links li a{
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links li:hover{
+  transform: scale(1.2);
+}
+.clicked{
+transform: translateX(0%);
+}
+}
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 768px) {
+  .email-section {
+    width:100%;
+    height:150px;
+    text-align: center;
+    padding-top: 4%;
+    display:block;
+  }
+  header .logo-area{
+    width:50%;
+position: absolute;
+text-align: center;
+  }
+  header .logo-area a{
+  font-size: 25px;
+  }
+  header .menu{
+    display:none;
+  }
+  main{
+    position: relative;
+    width:100%;
+  height: 350px;
+  margin-top:10px;
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 6.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+}
+/* RESPONSIVE HAMBURGER MENU*/
+@media screen and (max-width:768px){
+
+  .menu-btn{
+    position:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    transition: all .5s ease-in-out;
+
+    top:5px;
+    right:10px;
+      z-index: 2;
+  }
+  .menu-btn-bgr{
+    width:40px;
+    height:5px;
+    background: white;
+    border-radius:5px;
+    box-shadow:0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-bgr::before,
+  .menu-btn-bgr::after{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:5px;
+  background: white;
+  border-radius:5px;
+  box-shadow:0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  }
+  .menu-btn-bgr::before{
+    transform:translateY(-16px);
+  }
+  .menu-btn-bgr::after{
+    transform:translateY(16px);
+  }
+
+
+  .menu-btn.open .menu-btn-bgr{
+    transform:translateX(-50px);
+    background:transparent;
+    box-shadow:none;
+  }
+  .menu-btn.open .menu-btn-bgr::before{
+    transform:rotate(45deg) translate(35px,-35px);
+  }
+  .menu-btn.open .menu-btn-bgr::after{
+    transform:rotate(-45deg) translate(35px,35px) ;
+  }
+.nav-links{
+  width: 100%;
+background-color:#131A22;
+  position:fixed;
+transform: translateX(-100%);
+  height:100vh;
+  z-index: 1;
+  transition:.3s ease-in-out;
+}
+.nav-links ul{
+opacity: 1;
+  margin-top: 100px;
+  display:block;
+  z-index:1;
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align:center;
+  font-weight: 600;
+    transition:.3s ease-in-out;
+}
+.nav-links li{
+  width:100%;
+  height:50px;
+  padding:40px 0px;
+  display:block;
+  z-index:1;
+    transition:.3s ease-in-out;
+    border-bottom: 1px solid white;
+}
+.nav-links li a{
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links li:hover{
+  transform: scale(1.2);
+}
+.clicked{
+transform: translateX(0%);
+}
+}
